@@ -39,6 +39,7 @@ class Post(models.Model):
     published = PublishedManager()  # Our custom manager.
 
 
+# get url for a single post
 def get_absolute_url(self):
     return reverse('blog:post_detail',
                    args=[self.publish.year,
